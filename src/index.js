@@ -116,11 +116,20 @@ class Clock extends React.Component {
   }
 
   componentDidMount() {
-
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
   }
 
   componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
 
+  tick() {
+    this.setState({
+      date: new Date()
+    });
   }
 
   render() {
@@ -132,6 +141,19 @@ class Clock extends React.Component {
     );
   }
 }
+
+// // Wrong
+// this.state.comment = 'Hello';
+// // Correct
+// this.setState({comment: 'Hello'});
+
+/* <button onclick="activateLasers()">
+  Activate Lasers
+</button>
+<button onClick={activateLasers}>
+  Activate Lasers
+</button> */
+
 
   ReactDOM.render(
     <Clock />,
