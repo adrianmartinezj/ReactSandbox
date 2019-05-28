@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'shards-react';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import TileView from './TileView/TileView';
 
 
 // function formatName(user)
@@ -109,32 +111,32 @@ import * as serviceWorker from './serviceWorker';
 //   );
 // }
 
-class Clock extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {date: new Date()};
-  }
+// class Clock extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {date: new Date()};
+//   }
 
-  componentDidMount() {
+//   componentDidMount() {
 
-  }
+//   }
 
-  componentWillUnmount() {
+//   componentWillUnmount() {
 
-  }
+//   }
 
-  render() {
-    return (
-      <div>
-        <h1>Hello, world!</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div>
+//         <h1>Hello, world!</h1>
+//         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+//       </div>
+//     );
+//   }
+// }
 
   ReactDOM.render(
-    <Clock />,
+    <TileView />,
     document.getElementById('root'));
 
 
