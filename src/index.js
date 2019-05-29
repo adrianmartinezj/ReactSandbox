@@ -1,18 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button, ButtonGroup } from 'shards-react';
 import './index.css';
+import TileView from './TileView/TileView';
+import Alert from 'react-bootstrap/Alert';
 
   const buttonView =  (
-    <ButtonGroup>
-      <Button>Left</Button>
-      <Button>Middle</Button>
-      <Button>Right</Button>
-    </ButtonGroup>
+    <h1>
+      This is working again.
+      <TileView />
+    </h1>
     );
 
-  ReactDOM.render(
-    buttonView,
-    document.getElementById('root'));
+    
 
+  ReactDOM.render(
+    [
+      'primary',
+      'secondary',
+      'success',
+      'danger',
+      'warning',
+      'info',
+      'light',
+      'dark',
+    ].map((variant, idx) => (
+      <Alert key={idx} variant={variant}>
+        This is a {variant} alert—check it out!
+      </Alert>
+    )),
+    document.getElementById('root'));
 
