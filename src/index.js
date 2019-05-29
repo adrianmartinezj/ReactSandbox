@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Image from 'react-bootstrap/Image';
+import 
+{
+  Image,
+  Navbar,
+  Form,
+  FormControl,
+  Button
+} from 'react-bootstrap';
 // import img from './Assets/Yosemite_1900x831';
 
 // import TileView from './TileView/TileView';
@@ -16,7 +23,30 @@ import Image from 'react-bootstrap/Image';
 
   // Figure out how to get images in react-bootstrap working
   const pageView = (
-    <Image src={require('./Yosemite_1900x831')} fluid/>
+    <div>
+      <div className="banner_wrapper">
+        <div className="background_banner">
+          <Image src={require('./Assets/Yosemite_1900x831.jpg')} fluid />
+        </div>
+        <div className="column_banner">
+          <div className="nav_wrapper">
+            <Navbar bg="light" expand="lg">
+              <Form inline>
+                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                <Button variant="outline-success">Search</Button>
+              </Form>
+            </Navbar>
+          </div>
+        </div>
+      </div>
+      <h1>
+        Whoah it worked
+
+        what does
+        This
+        do.
+      </h1>
+    </div>
   );
 
 
