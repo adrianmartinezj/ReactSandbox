@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Button, ButtonGroup } from 'shards-react';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import { NavExample } from './NavBar/NavBar';
 
-
-
-
-
-const element = <NavExample />;
+  const buttonView =  (
+    <ButtonGroup>
+      <Button>Left</Button>
+      <Button>Middle</Button>
+      <Button>Right</Button>
+    </ButtonGroup>
+    );
 
   ReactDOM.render(
-    element,
+    buttonView,
     document.getElementById('root'));
 
 
-serviceWorker.unregister();
